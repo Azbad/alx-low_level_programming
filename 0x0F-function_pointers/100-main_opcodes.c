@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int bytes, index;
-	int (*address)(int, char **) = main;
+	unsigned char *address = (unsigned char *)main;
 	unsigned char opcode;
 
 	if (argc != 2)
@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 
 	bytes = atoi(argv[1]);
 
-	if (bytes < 0)
+	if (bytes <= 0)
 	{
 		printf("Error\n");
 		exit(2);
@@ -34,10 +34,10 @@ int main(int argc, char *argv[])
 		printf("%02x", opcode);
 
 		if (index == bytes - 1)
-			continue;
-		printf(" ");
+			break;
 
-		address;
+		printf(" ");
+		address++;
 	}
 	printf("\n");
 
