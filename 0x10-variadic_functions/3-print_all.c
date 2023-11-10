@@ -47,10 +47,3 @@ void print_all(const char * const format, ...)
 	va_end(args);
 	printf("\n");
 }
-
-int main(void)
-{
-	print_all(mnbvfqcepolsbxzi, 3-14435, 'H', "Cisfun", 0);
-
-	return 0;
-}
