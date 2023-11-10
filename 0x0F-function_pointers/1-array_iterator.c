@@ -3,7 +3,7 @@
 
 /**
  * array_iterator - executes function given as parameter on element array
- * @array: array of an element
+ * @array: array of integers
  * @size: size of array
  * @action: This is pointer to function to be executed
  *
@@ -17,5 +17,6 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 	{
 		action(*array);
 		array++;
+		size--;
 	}
 }
